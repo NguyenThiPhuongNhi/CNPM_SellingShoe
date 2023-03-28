@@ -93,18 +93,17 @@
                 for (Order order : orderList) {
               %>
               <tr>
-                <td><a href=""><%=order.getIdorder()%></a></td>
+                <td><a href=""><%=order.getIdOrder()%></a></td>
                 <td class="hidden-phone"><%=order.getFirstName()%></td>
                 <%
                   NumberFormat nf = NumberFormat.getInstance();
                   nf.setMinimumFractionDigits(0);
-                  List<ProductOrder> productOrderList = ProductOrderService.getProductOrderByIdO(String.valueOf(order.getIdorder()));
+                  List<ProductOrder> productOrderList = ProductOrderService.getProductOrderByIdO(String.valueOf(order.getIdOrder()));
                   int totalprice = 0;
                   for (ProductOrder po : productOrderList) {
-                    Product p = ProductService.getProductById(String.valueOf(po.getIdp()));
+                    Product p = ProductService.getProductById(String.valueOf(po.getIdProduct()));
                     totalprice += p.getPrice() * po.getQuantity();
                   }
-
                 %>
                 <td>
                   <%=nf.format(totalprice)%>
@@ -127,13 +126,13 @@
 
                 </span></td>
                 <td>
-                  <a href="adminAccept?idorder=<%=order.getIdorder()%>&status=<%=order.getStatus()%>" class="btn btn-success btn-xs"><i class="fa fa-check"></i></a>
-                  <a href="adminViewOrder?idorder=<%=order.getIdorder()%>" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
-                  <a href="adminAccept?idorder=<%=order.getIdorder()%>&status=<%=order.getStatus()%>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></a>
+                  <a href="adminAccept?idorder=<%=order.getIdOrder()%>&status=<%=order.getStatus()%>" class="btn btn-success btn-xs"><i class="fa fa-check"></i></a>
+                  <a href="adminViewOrder?idorder=<%=order.getIdOrder()%>" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
+                  <a href="adminAccept?idorder=<%=order.getIdOrder()%>&status=<%=order.getStatus()%>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></a>
 
-<%--                  <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>--%>
-<%--                  <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>--%>
-<%--                  <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>--%>
+                  <%--                  <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>--%>
+                  <%--                  <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>--%>
+                  <%--                  <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>--%>
                 </td>
               </tr>
               <%}%>
@@ -175,12 +174,10 @@
 
 <script>
   //custom select box
-
   $(function () {
     $('select.styled').customSelect();
   });
-
 </script>
 
 </body>
-</html>
+</html></html>

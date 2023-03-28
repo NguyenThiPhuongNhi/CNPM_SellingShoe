@@ -55,7 +55,6 @@
                     <%
                         User ac = (User) request.getSession().getAttribute("auth");
                         if (ac == null) {
-
                     %>
                     <li class="nav-item">
                         <a href="login.jsp" class="cart"><span class="ti-user"></span></a>
@@ -71,14 +70,14 @@
 
                     <li class="nav-item user" style="margin-top: 28px">
                         <a href="profile" class="cart">
-                          Chào  <%=ac.getUser()%>
+                            <%=ac.getUserName()%>
 
 
                         </a></li>
                     <% } else {%>
                     <li class="nav-item" style="margin-top: 28px">
                         <a href="adminHome" class="cart">
-                            <%=ac.getUser()%>
+                            <%=ac.getUserName()%>
                         </a></li>
                     <% }}%>
 
@@ -86,19 +85,19 @@
                         <%if (ac == null) {%>
                         <a href="cart1.jsp" class="cart" id="cart">
                             <span class="ti-bag"></span><span class="badge">
-                        <p><span class="total-count"></span></p></span>
+                    <p><span class="total-count"></span></p></span>
                         </a>
 
                         <% }%>
-<%--                        <%--%>
-<%--                            if (ac != null) {--%>
-<%--                                List<Cart> c = (List<Cart>) CartService.getAllItemCart(String.valueOf(ac.getIdUser()));--%>
-<%--                        %>--%>
-<%--                        <a href="show-cart" class="cart" id="cart">--%>
-<%--                            <span class="ti-bag"></span><span class="badge">--%>
-<%--                     <p><%=c.size()%></p></span>--%>
-<%--                        </a>--%>
-<%--                        <% }%>--%>
+                        <%
+                            if (ac != null) {
+                                List<Cart> c = (List<Cart>) CartService.getAllItemCart(String.valueOf(ac.getIdUser()));
+                        %>
+                        <a href="show-cart" class="cart" id="cart">
+                            <span class="ti-bag"></span><span class="badge">
+                     <p><%=c.size()%></p></span>
+                        </a>
+                        <% }%>
                     </li>
 
                     <li class="nav-item">
@@ -112,8 +111,8 @@
 
 <div class="search_input" id="search_input_box">
     <div class="container">
-        <form action="search" class="d-flex justify-content-between">
-            <input name="textSearch" type="text" class="form-control" id="search_input" placeholder="Tìm kiếm">
+        <form class="d-flex justify-content-between">
+            <input type="text" class="form-control" id="search_input" placeholder="Tìm kiếm">
             <button type="submit" class="btn"></button>
             <span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
         </form>

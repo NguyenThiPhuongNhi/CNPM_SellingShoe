@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class LoginService {
-    public static User getAccout(String user, String password) {
+    public static User getAccount(String user, String password) {
         List<User> accounts = JDBiConnector.me().withHandle(h ->
                 h.createQuery("SELECT * FROM user WHERE userName = ? and password =?")
                         .bind(0, user).bind(1, password)

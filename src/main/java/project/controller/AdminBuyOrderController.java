@@ -18,7 +18,7 @@ import java.util.List;
 public class AdminBuyOrderController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Order>orderList = OrderService.getAllOrder();
+        List<Order> orderList = OrderService.getAllOrder();
         User ac = (User) request.getSession().getAttribute("auth");
         List<Cart> listCart = CartService.getAllByIda(String.valueOf(ac.getIdUser()));
 

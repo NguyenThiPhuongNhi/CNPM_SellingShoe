@@ -38,7 +38,7 @@ public class CheckoutCotroller extends HttpServlet {
 
         OrderService.insertOrderByIdAcc(firstName, lastName, email, phone, address, String.valueOf(ac.getIdUser()));
         List<Order> orderList = OrderService.getAllOrderById(String.valueOf(ac.getIdUser()));
-        String idO = String.valueOf(orderList.get(orderList.size()-1).getIdorder());
+        String idO = String.valueOf(orderList.get(orderList.size()-1).getIdOrder());
         for (Cart c : listCart) {
             ProductOrderService.addProductToProductOrder(idO, String.valueOf(c.getIdProduct()), String.valueOf(c.getQuantity()));
         }

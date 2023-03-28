@@ -92,6 +92,8 @@
 
                             <a href="admin-edit-product?idP=<%=p.getIdPro()%>" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
                             <a href="DeleteControl?idPro=<%=p.getIdPro()%>" class="btn btn-danger btn-xs" type="submit"><i class="fa fa-trash-o "></i> </a>
+<%--                            <a href="DeleteControl?idPro=<%=p.getIdPro()%>" class="btn btn-danger btn-xs" type="submit"><i class="fa fa-trash-o "></i> </a>--%>
+
                         </td>
 
                     </tr>

@@ -88,7 +88,7 @@ public class User implements Serializable {
     }
 
     public String getUser() {
-        return user;
+        return userName;
     }
 
     public void setUser(String user) {
