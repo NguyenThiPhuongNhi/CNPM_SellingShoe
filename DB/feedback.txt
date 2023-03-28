@@ -1,0 +1,4 @@
+"idFB"	"cmt"	"idUser"	"idPro"
+"1"	"sản phẩm rất tốt sẽ tiếp tục ủng hộ"	"1"	"4"
+"2"	"sản phẩm rất tốt sẽ tiếp tục ủng hộ"	"2"	"5"
+"3"	"sản phẩm rất tốt sẽ tiếp tục ủng hộ"	"3"	"9"

@@ -1,0 +1,4 @@
+"idUser"	"userName"	"fullname"	"email"	"DOB"	"password"	"managerAccount"	"managerProduct"	"managerBog"	"managerHome"	"assistant"	"manageOrder"
+"1"	"nhi"	"Nguyễn Thi Phương Nhi"	"nhi@gmail.com"	"18/7/2002"	"202cb962ac59075b964b07152d234b70"	"1"	"1"	"1"	"1"	"1"	"1"
+"2"	"ngan"	"Nguyễn Ngọc Bảo Ngân"	"ngan@gmail.com"	"19/4/2002"	"4297f44b13955235245b2497399d7a93"	"0"	"0"	"0"	"0"	"0"	"0"
+"3"	"linh"	"Nguyễn Thị Hồng Linh"	"linh@gmail.com"	"4/6/2002"	"b59c67bf196a4758191e42f76670ceba"	"0"	"0"	"0"	"0"	"0"	"0"

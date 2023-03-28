@@ -1,0 +1,1 @@
+"idCart"	"idProduct"	"quantity"	"idAccount"

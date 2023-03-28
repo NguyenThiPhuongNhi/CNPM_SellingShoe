@@ -1,0 +1,4 @@
+"idCat"	"catName"
+"1"	"Nam"
+"2"	"Nữ"
+"3"	"Khuyến mãi"

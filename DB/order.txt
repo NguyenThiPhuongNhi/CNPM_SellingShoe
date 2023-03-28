@@ -1,0 +1,1 @@
+"idOrder"	"firstName"	"lastName"	"email"	"phone"	"address"	"payment"	"idAcc"	"status"
