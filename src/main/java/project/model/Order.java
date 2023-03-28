@@ -4,7 +4,7 @@ package project.model;
 import java.io.Serializable;
 
 public class Order implements Serializable {
-    private int idorder;
+    private int idOrder;
     private String firstName;
     private String lastName;
     private String email;
@@ -16,8 +16,8 @@ public class Order implements Serializable {
     public Order() {
     }
 
-    public Order(int idorder, String firstName, String lastName, String email, String phone, String address, int payment, int idAcc, int status) {
-        this.idorder = idorder;
+    public Order(int idOrder, String firstName, String lastName, String email, String phone, String address, int payment, int idAcc, int status) {
+        this.idOrder = idOrder;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -28,12 +28,12 @@ public class Order implements Serializable {
         this.status = status;
     }
 
-    public int getIdorder() {
-        return idorder;
+    public int getIdOrder() {
+        return idOrder;
     }
 
-    public void setIdorder(int idorder) {
-        this.idorder = idorder;
+    public void setIdOrder(int idOrder) {
+        this.idOrder = idOrder;
     }
 
     public String getFirstName() {
@@ -103,7 +103,7 @@ public class Order implements Serializable {
     @Override
     public String toString() {
         return "Order{" +
-                "idorder=" + idorder +
+                "idOrder=" + idOrder +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +

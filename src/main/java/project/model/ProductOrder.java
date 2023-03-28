@@ -4,40 +4,40 @@ package project.model;
 import java.io.Serializable;
 
 public class ProductOrder implements Serializable {
-    private  int idop,ido,idp,quantity;
+    private  int idOrderProduct, idOrder, idProduct,quantity;
 
     public ProductOrder() {
     }
 
-    public ProductOrder(int idop, int ido, int idp, int quantity) {
-        this.idop = idop;
-        this.ido = ido;
-        this.idp = idp;
+    public ProductOrder(int idOrderProduct, int idOrder, int idp, int quantity) {
+        this.idOrderProduct = idOrderProduct;
+        this.idOrder = idOrder;
+        this.idProduct = idp;
         this.quantity = quantity;
     }
 
-    public int getIdop() {
-        return idop;
+    public int getIdOrderProduct() {
+        return idOrderProduct;
     }
 
-    public void setIdop(int idop) {
-        this.idop = idop;
+    public void setIdOrderProduct(int idOrderProduct) {
+        this.idOrderProduct = idOrderProduct;
     }
 
-    public int getIdo() {
-        return ido;
+    public int getIdOrder() {
+        return idOrder;
     }
 
-    public void setIdo(int ido) {
-        this.ido = ido;
+    public void setIdOrder(int idOrder) {
+        this.idOrder = idOrder;
     }
 
-    public int getIdp() {
-        return idp;
+    public int getIdProduct() {
+        return idProduct;
     }
 
-    public void setIdp(int idp) {
-        this.idp = idp;
+    public void setIdProduct(int idProduct) {
+        this.idProduct = idProduct;
     }
 
     public int getQuantity() {
@@ -51,9 +51,9 @@ public class ProductOrder implements Serializable {
     @Override
     public String toString() {
         return "ProductOrder{" +
-                "idop=" + idop +
-                ", ido=" + ido +
-                ", idp=" + idp +
+                "idop=" + idOrderProduct +
+                ", ido=" + idOrder +
+                ", idp=" + idProduct +
                 ", quantity=" + quantity +
                 '}';
     }

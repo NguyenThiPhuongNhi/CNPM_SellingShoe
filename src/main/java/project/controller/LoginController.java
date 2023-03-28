@@ -18,7 +18,7 @@ public class LoginController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String user = request.getParameter("user");
         String password = request.getParameter("password");
-        User u = LoginService.getAccout(user, password) ;
+        User u = LoginService.getAccount(user, Encode.enCodeMD5(password) );
 
         if(u == null){
             request.setAttribute("mess", "Sai user hoặc mật khẩu!");

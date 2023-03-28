@@ -234,20 +234,20 @@
                             <h6><%=p.getName()%></h6>
                             <div class="price">
                                 <h6><%=p.getPrice()%>đ</h6>
-                                 <h6 class="l-through">210.000đ</h6>
+                                <h6 class="l-through">210.000đ</h6>
                             </div>
                             <div class="prd-bottom">
 
-                                <a href="" class="social-info add-to-cart"
-                                   data-name="<%=p.getName()%>" data-price="189">
+
+                                <a href="cart?command=insertItem&product_id=<%=p.getIdPro ()%>" class="social-info">
                                     <span class="ti-bag"></span>
                                     <p class="hover-text">Thêm vào giỏ</p>
-
                                 </a>
                                 <a href="" class="social-info">
                                     <span class="lnr lnr-heart"></span>
-                                    <p class="hover-text">Thêm vào yêu thích</p>
+                                    <p class="hover-text">Yêu thích</p>
                                 </a>
+
                                 <a href="" class="social-info">
                                     <span class="lnr lnr-move"></span>
                                     <p class="hover-text">Xem thêm</p>
@@ -274,7 +274,7 @@
             </div>
             <div class="row">
                 <% List<Product> productList = (List<Product>) request.getAttribute("list8Product");
-                for (Product product:productList){ %>
+                    for (Product product:productList){ %>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product">
                         <img class="img-fluid" src="<%=product.getImg()%>" alt="">
@@ -286,15 +286,16 @@
                             </div>
                             <div class="prd-bottom">
 
-                                <a href="" class="social-info add-to-cart"
-                                   data-name="<%=product.getName()%>" data-price="189">
+
+                                <a href="cart?command=insertItem&product_id=<%=product.getIdPro ()%>" class="social-info">
                                     <span class="ti-bag"></span>
                                     <p class="hover-text">Thêm vào giỏ</p>
                                 </a>
                                 <a href="" class="social-info">
                                     <span class="lnr lnr-heart"></span>
-                                    <p class="hover-text">Thêm vào yêu thích</p>
+                                    <p class="hover-text">Yêu thích</p>
                                 </a>
+
                                 <a href="" class="social-info">
                                     <span class="lnr lnr-move"></span>
                                     <p class="hover-text">Xem thêm</p>
@@ -310,81 +311,6 @@
     </div>
 </section>
 <!-- end product Area -->
-
-<!-- Start exclusive deal Area -->
-<section class="exclusive-deal-area">
-    <div class="container-fluid">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-lg-6 no-padding exclusive-left">
-                <div class="row clock_sec clockdiv" id="clockdiv">
-                    <div class="col-lg-12">
-                        <h1>Ưu đãi lớn sắp kết thúc</h1>
-                        <p></p>
-                        <!--                        <p>Who are in extremely love with eco friendly system.</p>-->
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="row clock-wrap">
-                            <div class="col clockinner1 clockinner">
-                                <h1 class="days">150</h1>
-                                <span class="smalltext">Ngày</span>
-                            </div>
-                            <div class="col clockinner clockinner1">
-                                <h1 class="hours">23</h1>
-                                <span class="smalltext">Giờ</span>
-                            </div>
-                            <div class="col clockinner clockinner1">
-                                <h1 class="minutes">47</h1>
-                                <span class="smalltext">Phút</span>
-                            </div>
-                            <div class="col clockinner clockinner1">
-                                <h1 class="seconds">59</h1>
-                                <span class="smalltext">Giây</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="" class="primary-btn">Mua sắm ngay</a>
-            </div>
-            <div class="col-lg-6 no-padding exclusive-right">
-                <div class="active-exclusive-product-slider">
-                    <!-- single exclusive carousel -->
-                    <div class="single-exclusive-slider">
-                        <img class="img-fluid" src="img/product/e-p1.png" alt="">
-                        <div class="product-details">
-                            <div class="price">
-                                <h6>189.000đ</h6>
-                                <h6 class="l-through">210.000đ</h6>
-                            </div>
-                            <h4>addidas New Hammer sole
-                                for Sports person</h4>
-                            <div class="add-bag d-flex align-items-center justify-content-center">
-                                <a class="add-btn" href=""><span class="ti-bag"></span></a>
-                                <span class="add-text text-uppercase">Thêm vào giỏ</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single exclusive carousel -->
-                    <div class="single-exclusive-slider">
-                        <img class="img-fluid" src="img/product/e-p1.png" alt="">
-                        <div class="product-details">
-                            <div class="price">
-                                <h6>189.000đ</h6>
-                                <h6 class="l-through">210.000đ</h6>
-                            </div>
-                            <h4>addidas New Hammer sole
-                                for Sports person</h4>
-                            <div class="add-bag d-flex align-items-center justify-content-center">
-                                <a class="add-btn" href=""><span class="ti-bag"></span></a>
-                                <span class="add-text text-uppercase">Thêm vào giỏ</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End exclusive deal Area -->
 
 <!-- Start brand Area -->
 <section class="brand-area section_gap">

@@ -3,12 +3,12 @@ package project.model;
 public class OrderDetail {
     int idOrder;
     int quantity;
-    int idro;
+    int idPro;
 
     public OrderDetail(int idOrder, int quantity, int idro) {
         this.idOrder = idOrder;
         this.quantity = quantity;
-        this.idro = idro;
+        this.idPro = idro;
     }
 
     public int getIdOrder() {
@@ -27,12 +27,12 @@ public class OrderDetail {
         this.quantity = quantity;
     }
 
-    public int getIdro() {
-        return idro;
+    public int getIdPro() {
+        return idPro;
     }
 
-    public void setIdro(int idro) {
-        this.idro = idro;
+    public void setIdPro(int idPro) {
+        this.idPro = idPro;
     }
 
     @Override
@@ -40,7 +40,7 @@ public class OrderDetail {
         return "OrderDetail{" +
                 "idOrder=" + idOrder +
                 ", quantity=" + quantity +
-                ", idro=" + idro +
+                ", idro=" + idPro +
                 '}';
     }
 }

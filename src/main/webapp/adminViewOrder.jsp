@@ -94,7 +94,7 @@
                             %>
 
                             <tr>
-                                <td><a href=""><%=order.getIdorder()%></a></td>
+                                <td><a href=""><%=order.getIdOrder()%></a></td>
                                 <td><%=order.getFirstName()%></td>
                                 <td><%=order.getLastName()%></td>
                                 <td><%=order.getEmail()%></td>

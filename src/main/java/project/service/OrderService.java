@@ -57,7 +57,7 @@ public class OrderService {
     }
     public static List<Order> getAllOrder() {
         return JDBiConnector.me().withHandle(handle -> {
-            return handle.createQuery("select * FROM order")
+            return handle.createQuery("select * FROM product")
                     .mapToBean(Order.class)
                     .stream().collect(Collectors.toList());
         });
@@ -73,7 +73,7 @@ public class OrderService {
     // lấy tất cả các ttangj thái
     public static void editStatus(String status,String idOrder) {
         JDBiConnector.me().withHandle(h ->
-                h.createUpdate("update orders set status= ? where idOrder =?")
+                h.createUpdate("update order set status= ? where idOrder =?")
                         .bind(0, status)
                         .bind(1, idOrder)
                         .execute()
@@ -93,9 +93,6 @@ public class OrderService {
 
 
     public static void main(String[] args) {
-       //editStatus("2","0");
-        System.out.println(viewUserOrder("0"));
-
-
+        System.out.println(getAllOrder());
     }
 }

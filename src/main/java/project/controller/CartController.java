@@ -23,8 +23,6 @@ public class CartController extends HttpServlet {
         String quantity = "1";
         if (ac != null) {
             Cart cart = CartService.checkProduct(product_id, String.valueOf(ac.getIdUser()));
-
-
             try {
 
                 switch (command) {
