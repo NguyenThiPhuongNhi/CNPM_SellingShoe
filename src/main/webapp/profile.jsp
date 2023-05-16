@@ -69,14 +69,14 @@
     <% User u1 = (User) request.getSession().getAttribute("auth");
         User u2 = LoginService.getAccoutById(String.valueOf(u1.getIdUser()));
     %>
-    <div class="container container-profile" >
+    <div class="container container-profile">
 
 
-<%--        <nav class="nav nav-borders">--%>
-<%--            <a class="nav-link active ms-0" href="profile">Hồ sơ</a>--%>
-<%--            <a class="nav-link" href="buyOrder">Đơn mua</a>--%>
-<%--            <a class="nav-link" href="#">Thông báo</a>--%>
-<%--        </nav>--%>
+        <%--        <nav class="nav nav-borders">--%>
+        <%--            <a class="nav-link active ms-0" href="profile">Hồ sơ</a>--%>
+        <%--            <a class="nav-link" href="buyOrder">Đơn mua</a>--%>
+        <%--            <a class="nav-link" href="#">Thông báo</a>--%>
+        <%--        </nav>--%>
 
 
         <div class="row">
@@ -85,6 +85,8 @@
                 <div class="card mb-4">
                     <div class="card-header">Hồ sơ của tôi</div>
                     <div class="card-body">
+                        <%--                    2. Hiển thị trang chỉnh sửa thông tin (gọi qua servlet ProfileController.java).--%>
+                        <%--                    4. Nhập thông tin cần chỉnh sửa vào form.--%>
                         <form action="EditProfile">
                             <!-- Form Group (username)-->
                             <input type="hidden" value="<%=u1.getIdUser()%>" name="idUser">
@@ -124,9 +126,10 @@
                             </div>
                             <!-- Form Row-->
                             <!-- Save changes button-->
-                            <button class="btn btn-primary" type="submit" href="profile?command=edit">Lưu thông tin
+                            <%--                            5. Nhấn vào nút lưu.--%>
+                            <button class="btn btn-primary" type="submit" href="">Lưu thông tin
                             </button>
-                            <button class="btn btn-primary" type="button"><a href="profile?command=logout"
+                            <button class="btn btn-primary" type="button"><a href=""
                                                                              style=" color: #fff;">Đăng xuất</a>
                             </button>
                         </form>

@@ -9,17 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+//3. Servlet gọi phương thức getAccountById(id) để load và hiển thị dữ liệu
 @WebServlet(name = "EditProfile", value = "/EditProfile")
 public class EditProfile extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String id = request.getParameter("idUser");
-        String userName = request.getParameter("userName");
-        String fullName = request.getParameter("fullName");
-        String email = request.getParameter("email");
-        String DOB = request.getParameter("DOB");
-        AccountManagement.editUserWithId(userName,fullName,email,DOB,id);
-        response.sendRedirect("profile");
+
     }
 
     @Override
