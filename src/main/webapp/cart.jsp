@@ -5,6 +5,7 @@
 <%@ page import="project.service.ProductService" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 
+ <%-- 2.2.2 Tính tổng tiền của sản phẩm lại (dòng 135)--%>
 <html>
 
 <head>

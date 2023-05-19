@@ -2,6 +2,7 @@
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 
+ <%--Bước 1. Click "Thêm vào giỏ" dòng 243--%>
 <!-- meta character set -->
 <meta charset="UTF-8">
 <!-- Site Title -->
@@ -223,6 +224,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <% List<Product> list = (List<Product>) request.getAttribute("list8ProductNew");
                     for (Product p : list) { %>
@@ -238,7 +240,7 @@
                             </div>
                             <div class="prd-bottom">
 
-
+  <%--1. Click "Thêm vào giỏ"--%>
                                 <a href="cart?command=insertItem&product_id=<%=p.getIdPro ()%>" class="social-info">
                                     <span class="ti-bag"></span>
                                     <p class="hover-text">Thêm vào giỏ</p>

@@ -10,7 +10,11 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
+/* 2.Hệ thống thêm sản phẩm vào giỏ hàng
+    2.1 Nếu chưa có sản phẩm được thêm vào giỏ hàng (dòng 34)
+        2.1.1 Sản phẩm đó sẽ được thêm vào giỏ hàng
+    2.2 Nếu đã có sản phẩm đó trong giỏ hàng (dòng 36)
+        2.2.1 Sản phẩm sẽ được thêm số lượng */
 @WebServlet(name = "CartController", value = "/cart")
 public class CartController extends HttpServlet {
     @Override
